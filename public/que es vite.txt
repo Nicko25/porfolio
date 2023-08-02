@@ -1,0 +1,16 @@
+Vite es un una herramienta que simplifica la forma de construir aplicaciones web front-end haciendo 2 cosas:
+
+1. hace de servidor del proyecto durante el desarrollo (localhost)
+2. ejecuta js css y otros bundles durante la produccion.
+
+Fue creado un por de Evan you (creador de Vue.js) co nel fin de simplificar y acelerar el proceso de construccion de las aplicaciones
+
+Para crear un proyecto con vite se debe usar:
+
+- npm init vite nombreprojecto y elegir un framework. en este caso use React.js.
+esto genera el archivo vite.config.js en el cual podremos administrar nuestros plugins (yo no use ningun otro que react,
+ estoy investigando sobre vite-plugin-ssr para hacer server-side rendering como Next.js)
+
+- para iniciar la aplicacion uso: npm run dev
+
+- npm run build hara ciertas optimizaciones una vez que decida lanzarlo a produccion, generara un js bundle con code-splitting con dynamic imports y css

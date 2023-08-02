@@ -24,7 +24,7 @@ const Background = styled.div`
 
   background: linear-gradient(253deg, #3E71ED, #2D89D6, #2D30D6);
   background-size: 300% 300%;
-  //animation-name: mover;
+  animation-name: mover;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   
@@ -70,21 +70,18 @@ const Background = styled.div`
     }
   }
 `
-const ResFixer = styled.div`
-  height: 100%;
+const Widescreen = styled.div`
+background-color: blue;
   width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  place-items: center;
-  align-content: center;
-
-
-
+  justify-content: center;
 `
 
 const Container = styled.div`
-  height: 100vh;
-  width: 1920px;
+  background-color: aqua;
+  max-height: 100vh;
+  max-width: 1920px;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-y: auto;
@@ -94,18 +91,14 @@ const Container = styled.div`
       display: none;
     }
 
-  @media only screen and (max-width: 1920px){
-    width: 100%;
-  }
 
 `
 
 
 function App() {
   return (
-    <ResFixer>
+    <Widescreen>
       <Background/>
-      <Img src="./img/bg2.png"></Img>
       <Container>
         <BrowserRouter>
           <Hero/>
@@ -113,7 +106,7 @@ function App() {
           <Works/>
         </BrowserRouter>
       </Container>
-    </ResFixer>
+    </Widescreen>
   )
 }
 

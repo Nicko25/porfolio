@@ -14,13 +14,12 @@ const data = [
 const Section = styled.div`
   position: relative;
   height: 100vh;
+  justify-content: center;
   scroll-snap-align: center;
   display: flex;
-  justify-content: center;
   align-items: center;
   color: black;
   font-size: 14px;
-  font-weight: 300;
 
   @media only screen and (max-height: 740px){
     height: 740px;
@@ -60,8 +59,8 @@ const Top = styled.div`
     
   }
 
-  @media only screen and (max-width: 768px) {
-    height: 50%;
+  @media only screen and (max-width: 480px) {
+    height: 60%;
   }
 
   @media only screen and (max-height: 870px){
@@ -75,12 +74,11 @@ const Bottom = styled.div`
   right: 0;
   width: 100%;
   height: 50%;
-  @media only screen and (max-width: 768px) {
-    align-items: start;
-    width: 90%;
+  @media only screen and (max-width: 480px) {
+    height: 40%;
   }
 
-  @media only screen and (max-height: 870px){
+  @media only screen and (max-height: 740px){
     
   }
 `;
@@ -107,10 +105,10 @@ const Title = styled.h1`
   color: #fff;
   font-size: 74px;
   font-weight: bold;
+  max-width: 500px;
+  
 
-  @media only screen and (max-width: 530px) {
-    font-size: 60px;
-  }
+  
   @media only screen and (max-height: 740px) {
     padding-top: 8%;
     font-size: 50px;
@@ -163,8 +161,10 @@ const ListItem = styled.button`
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    height: 56px;
-    width: 300px;
+    height: 100px;
+    width: 350px;
+    font-size: 40px;
+    font-weight: 500;
     justify-content: center;
     line-height: 1;
     list-style: none;
@@ -180,18 +180,22 @@ const ListItem = styled.button`
     touch-action: manipulation;
     white-space: nowrap;
     will-change: box-shadow,transform;
-    font-size: 33px;
+
+    @media only screen and (max-width: 1000px) {
+      height: 80px;
+      width: 300px;
+      font-size: 33px;
+
+  }  
 
   @media only screen and (max-width: 768px) {
-    font-size: 20px;
-    width: 180px;
-    height: 40px;
+    height: 60px;
+    width: 200px;
+    font-size: 28px;
     gap: 2px;
   }
 
-  @media only screen and (max-width: 630px) {
-    width: 180px;
-  }
+  
 
   :focus{
     box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
@@ -200,6 +204,7 @@ const ListItem = styled.button`
   :hover{
     box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
     transform: translateY(-2px);
+    color: #d5d5d5;
   }
   :active{
     box-shadow: #3c4fe0 0 3px 7px inset;

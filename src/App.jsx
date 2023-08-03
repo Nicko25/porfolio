@@ -7,8 +7,14 @@ import { BrowserRouter } from 'react-router-dom';
 
 const BackgroundDesign = styled.img`
   position: fixed;
-  max-width: 1920px;
-  max-height: 1080px;
+  width: 1920px;
+  height: 1080px;
+  @media only screen and (min-width: 1921px){
+    display: none;
+  }
+  @media only screen and (min-height: 1081px){
+    display: none;
+  }
 `
 
 const Background = styled.div`
@@ -67,14 +73,15 @@ const Background = styled.div`
 const Widescreen = styled.div`
   background-color: blue;
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
+  height: 100vh;
+  margin: auto;
+
 `
 
 const Container = styled.div`
   max-height: 100vh;
   max-width: 1920px;
+  margin: auto;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-y: auto;

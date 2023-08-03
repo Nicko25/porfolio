@@ -194,17 +194,18 @@ const Subtitle = styled.h2`
 
 const Desc = styled.p`
   font-size: 23px;
+  font-weight: 400;
   color: lightgray;
   text-align: justify;
   text-justify: distribute-all-lines;
 
   @media only screen and (max-width: 768px) {
     font-size: 20px;
+
   }
 `;
 
 const Button = styled.button`
-  background-color: #6534F7;
   color: white;
   font-weight: 500;
   width: 100px;

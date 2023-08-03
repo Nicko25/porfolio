@@ -2,14 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Section = styled.div`
-  justify-content: center;
+  position: relative;
   height: 100vh;
-  width: 100%;
   scroll-snap-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   @media only screen and (max-height: 650px){
     height: 650px;
@@ -17,64 +15,65 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-  position: relative;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 1400px;
-  align-items: center;
 
-  @media only screen and (max-width: 1400px) {
-    width: 100%;
+  @media only screen and (max-width: 1440px) {
+    width: 90%;
   }
-
+  
   @media only screen and (max-width: 768px) {
-      flex-direction: column;
-      align-items: center;
+      flex-direction: column-reverse;
       justify-content: center;
   }
 `;
 
 const Left = styled.div`
-  position: absolute;
   display: flex;
-  height: 50%;
   width: 50%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
 
   @media only screen and (max-width: 1400px) {
     padding-left: 10px;
     align-items: center;
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 720px) {
     display: none;
   }
+
+  @media only screen and (max-height: 740px) {
+    display: none;
+  }
+  
 `;
 
 const Right = styled.div`
-  position: absolute;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  right: 0;
-  width: 50%;
-  height: 50%;
-  padding-right: 50px;
+  align-items: center;
+
+  @media only screen and (max-width: 720px) {
+    position: relative;
+    right: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  @media only screen and (max-height: 740px) {
+    position: relative;
+    right: none;
+    height: 100%;
+    width: 100%;
+  }
 
 
-  @media only screen and (max-width: 1400px) {
-    padding-left: 10px;
-    padding-right: 30px;
-    align-items: center;
-  }
-  @media only screen and (max-width: 768px) {
-    width: 90%;
-    right: auto;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
+
+
 `;
 
 
@@ -99,11 +98,11 @@ const Title = styled.h1`
   text-align: center;
 
   @media only screen and (max-width: 1400px) {
-    font-size: 60px;
+    font-size: 55px;
   }
 
   @media only screen and (max-width: 768px) {
-    font-size: 50px;
+    font-size: 40px;
   }
 `;
 
@@ -111,16 +110,18 @@ const DescContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: center;
   width: 100%;
 
 
   @media only screen and (max-width: 1400px) {
     padding-left: 10px;
     align-items: center;
+    padding: 15px;
   }
   @media only screen and (max-width: 768px) {
     right: auto;
+    justify-content: end;
   }
 `;
 
@@ -140,15 +141,18 @@ const Subtitle = styled.h2`
 
 const Desc = styled.p`
   font-size: 23px;
+  font-weight: 400;
   color: lightgray;
   text-align: justify;
   text-justify: distribute-all-lines;
 
-  
-
+  @media only screen and (max-width: 1400px) {
+    padding: 10px;
+  }
 
   @media only screen and (max-width: 768px) {
     font-size: 20px;
+    
 
   }
 `;

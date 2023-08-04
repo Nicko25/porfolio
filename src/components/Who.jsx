@@ -28,7 +28,6 @@ const Container = styled.div`
   
   @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
-      justify-content: center;
   }
 `;
 
@@ -53,29 +52,21 @@ const Left = styled.div`
 const Right = styled.div`
   width: 50%;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
 
   @media only screen and (max-width: 720px) {
-    position: relative;
-    right: none;
     height: 100%;
     width: 100%;
   }
 
   @media only screen and (max-height: 740px) {
-    position: relative;
-    right: none;
     height: 100%;
     width: 100%;
   }
-
-
-
-
 `;
-
 
 const Img = styled.img`
   object-fit: contain;
@@ -107,16 +98,12 @@ const Title = styled.h1`
 `;
 
 const DescContainer = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
-
+  
 
   @media only screen and (max-width: 1400px) {
     padding-left: 10px;
-    align-items: center;
     padding: 15px;
   }
   @media only screen and (max-width: 768px) {
@@ -128,7 +115,6 @@ const DescContainer = styled.div`
 const WhatWeDo = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
 `;
 
 const Line = styled.img`
@@ -143,8 +129,8 @@ const Desc = styled.p`
   font-size: 23px;
   font-weight: 400;
   color: lightgray;
-  text-align: justify;
-  text-justify: distribute-all-lines;
+  
+  
 
   @media only screen and (max-width: 1400px) {
     padding: 10px;
@@ -165,6 +151,7 @@ const Button = styled.button`
   padding: 10px;
   border: none;
   border-radius: 5px;
+  margin: auto;
   margin-top: 15px;
   cursor: pointer;
 `;

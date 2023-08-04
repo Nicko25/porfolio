@@ -18,9 +18,11 @@ const Section = styled.div`
 
 const Container = styled.div`
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 1400px;
-  align-items: center;
 
   @media only screen and (max-width: 1440px) {
     width: 90%;
@@ -87,22 +89,14 @@ const Drag = styled.h2`
 const Left = styled.div`
   display: flex;
   position: relative;
+  height: 100%;
   width: 50%;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 
-  animation-name: appear;
-  animation-duration: 1s;
-
-  @keyframes appear {
-    from { opacity: 0; filter: blur(5px); }
-    to { opacity: 1; filter: blur(0);}
-  }
-
   @media only screen and (max-width: 768px) {
     width: 100%;
-    height: 50%;
     justify-content: center;
   }
 `;
@@ -187,7 +181,7 @@ const Subtitle = styled.h2`
   color: #e75d5c;
 
   @media only screen and (max-width: 768px) {
-
+    
   }
   
 `;
@@ -196,8 +190,10 @@ const Desc = styled.p`
   font-size: 23px;
   font-weight: 400;
   color: lightgray;
-  text-align: justify;
-  text-justify: distribute-all-lines;
+
+  @media only screen and (max-width: 1400px) {
+    padding: 10px;
+  }
 
   @media only screen and (max-width: 768px) {
     font-size: 20px;
@@ -222,7 +218,6 @@ const Hero = () => {
     <Section id='home'>
       <Navbar/> 
       <Container>
-        
         <Left>
           <Title>¡Hola!, me llamo Nicolas</Title>
           <WhatWeDo>

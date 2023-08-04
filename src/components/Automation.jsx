@@ -79,8 +79,7 @@ const Desc = styled.p`
   font-size: 23px;
   font-weight: 400;
   color: lightgray;
-  text-align: justify;
-  text-justify: distribute-all-lines;
+  text-align: left;
 
   @media only screen and (max-width: 768px) {
     font-size: 20px;

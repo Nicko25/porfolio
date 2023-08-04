@@ -1,10 +1,8 @@
-2 hacer entendible que en WORKS son botones seleccionables
-3 en WORKS agregar un description absolute que se despliegue al hacer click en cada texto. ¿agregar efectos?
-4 buscar un mejor logo que nico en la navbar
-5 en navbar ver si se peude agregar algo para resoluciones mas grandes asi no queda tan vacio
-
+1 buscar un mejor logo que nico en la navbar.
+2 arreglar el justificado de hero y works.
+3 Revisar y mejorar Descripciones.
+4 deploy :D
 
 investigar:
 
-1. IMPORTANTE: pensar ideas para agregar en WORKS para que los objetos 3D no queden tan vacios
-2. EL gradient de background es animado, pero al momento aparece un bug que elimina totalmente el container desplazandolo, Dejar para lo ultimo 
+1 agregar mas efectos y animaciones en who y hero.

@@ -113,6 +113,7 @@ const DescContainer = styled.div`
 `;
 
 const WhatWeDo = styled.div`
+  gap: 10px;
   display: flex;
   align-items: center;
 `;

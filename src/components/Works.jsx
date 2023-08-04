@@ -51,19 +51,12 @@ const Top = styled.div`
   flex-direction: column;
   justify-content: center;
 
-
-
-
   @media only screen and (max-width: 1440px) {
     position: relative;
-    
   }
 
   @media only screen and (max-width: 480px) {
     height: 60%;
-  }
-
-  @media only screen and (max-height: 870px){
   }
 `;
 

@@ -17,9 +17,9 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   height: 100%;
   width: 1400px;
@@ -89,7 +89,7 @@ const Drag = styled.h2`
 const Left = styled.div`
   display: flex;
   position: relative;
-  height: 100%;
+  height: 50%;
   width: 50%;
   flex-direction: column;
   align-items: center;
@@ -109,6 +109,7 @@ const Right = styled.div`
   align-items: center;
   right: 0;
   width: 50%;
+  height: auto;
 
 
   @media only screen and (max-width: 768px) {

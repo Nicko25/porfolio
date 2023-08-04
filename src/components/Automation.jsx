@@ -64,7 +64,7 @@ const TitleContainer = styled.div`
   width: fit-content;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 `;
 
 const Line = styled.img`

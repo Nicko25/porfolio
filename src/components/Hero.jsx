@@ -56,6 +56,11 @@ const Info = styled.div`
   }
 `;
 const Flecha = styled.img`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   width: 240px;
   height: 240px;
   transform: rotate(220deg) scaleX(-1);
@@ -73,6 +78,12 @@ const Flecha = styled.img`
   }
 `; 
 const Drag = styled.h2`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+
   color: white;
   position: absolute;
   top: 70%;
@@ -87,6 +98,11 @@ const Drag = styled.h2`
 `;
 
 const Left = styled.div`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   display: flex;
   position: relative;
   height: 50%;
@@ -103,6 +119,11 @@ const Left = styled.div`
 
 
 const Right = styled.div`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   position: absolute;
   display: flex;
   flex-direction: column;

@@ -10,6 +10,11 @@ const Container = styled.div`
 `;
 
 const Img = styled.img`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   width: 650px;
   height: 450px;
   z-index: 1;

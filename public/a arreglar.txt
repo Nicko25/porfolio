@@ -1,8 +1,0 @@
-1 buscar un mejor logo que nico en la navbar.
-2 
-3 Revisar y mejorar Descripciones.
-4 deploy :D
-
-investigar:
-
-1 agregar mas efectos y animaciones en who y hero.

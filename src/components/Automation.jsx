@@ -7,14 +7,16 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media only screen and (max-width: 768px) {
-    align-items: start;
-  }
 `;
 
 const Img = styled.img`
-  width: 700px;
-  height: 500px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  width: 650px;
+  height: 450px;
   z-index: 1;
   margin: auto;
   animation-name: appear;
@@ -33,6 +35,10 @@ const Img = styled.img`
   @media only screen and (max-width: 768px) {
     display: none;
   }
+
+  @media only screen and (max-height: 768px) {
+    display: none;
+  }
 `;
 
 const DescContainer = styled.div`
@@ -40,18 +46,20 @@ const DescContainer = styled.div`
   z-index: 2;
   width: 100%;
   height: fit-content;
-  border-radius: 5px;
   top: 40%;
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  padding: 10px;
+
 
   @media only screen and (max-width: 768px) {
     position: relative;
     top: 0px;
   }
-  @media only screen and (max-width: 400px) {
 
+  @media only screen and (max-height: 740px) {
+    position: relative;
+    top: 0px;
   }
 `;
 
@@ -61,7 +69,7 @@ const TitleContainer = styled.div`
   width: fit-content;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 `;
 
 const Line = styled.img`
@@ -72,14 +80,14 @@ const Subtitle = styled.h2`
   color: #e75d5c;
 `;
 
-const Desc = styled.div`
+const Desc = styled.p`
   font-size: 23px;
+  font-weight: 400;
   color: lightgray;
-  text-align: justify;
-  text-justify: distribute-all-lines;
+  text-align: left;
 
-  
   @media only screen and (max-width: 768px) {
+    font-size: 20px;
 
   }
 `;

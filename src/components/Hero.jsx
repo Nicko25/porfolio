@@ -17,10 +17,12 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
+  position: relative;
   display: flex;
+  flex-direction: row;
+  align-items: center;
   height: 100%;
   width: 1400px;
-  align-items: center;
 
   @media only screen and (max-width: 1440px) {
     width: 90%;
@@ -54,6 +56,11 @@ const Info = styled.div`
   }
 `;
 const Flecha = styled.img`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   width: 240px;
   height: 240px;
   transform: rotate(220deg) scaleX(-1);
@@ -71,6 +78,12 @@ const Flecha = styled.img`
   }
 `; 
 const Drag = styled.h2`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+
   color: white;
   position: absolute;
   top: 70%;
@@ -85,36 +98,39 @@ const Drag = styled.h2`
 `;
 
 const Left = styled.div`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   display: flex;
   position: relative;
+  height: 50%;
   width: 50%;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 
-  animation-name: appear;
-  animation-duration: 1s;
-
-  @keyframes appear {
-    from { opacity: 0; filter: blur(5px); }
-    to { opacity: 1; filter: blur(0);}
-  }
-
   @media only screen and (max-width: 768px) {
     width: 100%;
-    height: 50%;
     justify-content: center;
   }
 `;
 
 
 const Right = styled.div`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   right: 0;
   width: 50%;
+  height: auto;
 
 
   @media only screen and (max-width: 768px) {
@@ -187,24 +203,27 @@ const Subtitle = styled.h2`
   color: #e75d5c;
 
   @media only screen and (max-width: 768px) {
-
+    
   }
   
 `;
 
 const Desc = styled.p`
   font-size: 23px;
+  font-weight: 400;
   color: lightgray;
-  text-align: justify;
-  text-justify: distribute-all-lines;
+
+  @media only screen and (max-width: 1400px) {
+    padding: 10px;
+  }
 
   @media only screen and (max-width: 768px) {
     font-size: 20px;
+
   }
 `;
 
 const Button = styled.button`
-  background-color: #6534F7;
   color: white;
   font-weight: 500;
   width: 100px;
@@ -221,7 +240,6 @@ const Hero = () => {
     <Section id='home'>
       <Navbar/> 
       <Container>
-        
         <Left>
           <Title>¡Hola!, me llamo Nicolas</Title>
           <WhatWeDo>

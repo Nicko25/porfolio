@@ -5,16 +5,16 @@ import Works from './components/Works'
 import { BrowserRouter } from 'react-router-dom';
 
 
-const Img = styled.img`
-  display: none;
+const BackgroundDesign = styled.img`
   position: fixed;
   width: 1920px;
   height: 1080px;
-
-  @media only screen and (max-width: 1920px) and (max-height: 1080px){
-    display: initial;
+  @media only screen and (min-width: 1921px){
+    display: none;
   }
-
+  @media only screen and (min-height: 1081px){
+    display: none;
+  }
 `
 
 const Background = styled.div`
@@ -71,17 +71,17 @@ const Background = styled.div`
   }
 `
 const Widescreen = styled.div`
-background-color: blue;
+  background-color: blue;
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
+  height: 100vh;
+  margin: auto;
+
 `
 
 const Container = styled.div`
-  background-color: aqua;
   max-height: 100vh;
   max-width: 1920px;
+  margin: auto;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-y: auto;
@@ -90,8 +90,6 @@ const Container = styled.div`
     &::-webkit-scrollbar{  // hide scrollbar for chrome...
       display: none;
     }
-
-
 `
 
 
@@ -99,6 +97,7 @@ function App() {
   return (
     <Widescreen>
       <Background/>
+      <BackgroundDesign src="./img/bg2.png"></BackgroundDesign>
       <Container>
         <BrowserRouter>
           <Hero/>

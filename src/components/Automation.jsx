@@ -100,7 +100,9 @@ function Automation() {
           <Line src="./img/line.png"></Line>
           <Subtitle>Automation</Subtitle>
         </TitleContainer>
-        <Desc>In the Front End Development Libraries Certification, you'll learn how to style your site quickly with Bootstrap. You'll also learn how to add logic to your CSS styles and extend them with Sass.</Desc>
+        <Desc>Si es un proceso repetitivo, seguramente pueda automatizarse. Actualmente lo hago como un hobby,
+           en el cual busco usar los conocimientos que voy aprendiendo,
+            desarrollando programas que ayuden a agilizar tareas que con el tiempo se vuelven muy tediosas de realizar.</Desc>
       </DescContainer>  
       <Img src="./img/typing_robot_by_Austing_Light2.gif"></Img>
     </Container>

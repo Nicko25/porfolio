@@ -1,4 +1,4 @@
-import { OrbitControls, Stage } from "@react-three/drei";
+import { CameraShake, OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import styled from "styled-components";
@@ -68,7 +68,12 @@ const CanvasContainer = styled.div`
   }
 `;
 
+
+
+
+
 const WebDesign = () => {
+
 
   return (
     <>
@@ -77,15 +82,15 @@ const WebDesign = () => {
         <Line src="./img/line.png"></Line>
         <Subtitle>Web Design</Subtitle>
       </TitleContainer>
-      <Desc>In the Front End Development Libraries Certification, you'll learn how to style your site quickly with Bootstrap. You'll also learn how to add logic to your CSS styles and extend them with Sass.</Desc>
+      <Desc>Lo mas importante es dejar bien en claro los objetivos y propositos por los cuales se diseña una pagina web, de esta forma se podra saber que tipos de contenidos se necesitan y como debemos adaptarlos.</Desc>
     </DescContainer>
     <CanvasContainer> 
-      <Canvas style={{ position: "relative" , zIndex: 1}}>
+      <Canvas>
         <Suspense fallback={null}>
-          <Stage  environment="city" intensity={0.3}>
+          <Stage  environment="city" intensity={0.3} camera={{ fov: 60, position: [-10, 45, 20]}}>
             <Screen />
           </Stage>
-          <OrbitControls enableZoom={false}/>
+          <OrbitControls enableZoom={false} />
         </Suspense>
       </Canvas>
     </CanvasContainer>

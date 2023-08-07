@@ -77,7 +77,9 @@ function Development() {
           <Line src="./img/line.png"></Line>
           <Subtitle>Development</Subtitle>
         </TitleContainer>
-        <Desc>In the Front End Development Libraries Certification, you'll learn how to style your site quickly with Bootstrap. You'll also learn how to add logic to your CSS styles and extend them with Sass.</Desc>
+        <Desc>Un punto clave del desarrollo de paginas web es el poder mantener su adaptabilidad en todo tipo de dispositivos, de esta forma,
+         los usuarios podran tener la misma experiencia al visitar nuestro sitio sin importar que medios utilicen.
+        </Desc>
       </DescContainer>
       <CanvasContainer> 
         <Canvas style={{zIndex: 1}}>

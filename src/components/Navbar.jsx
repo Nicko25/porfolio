@@ -91,15 +91,17 @@ const Icon = styled.img`
   cursor: pointer;
 `
 
-const Button = styled.button`
+const Button = styled.a`
+  background-color: #e75d5c;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 400;
+  font-size: 15px;
+  color: black;
   width: 100px;
   padding: 10px;
-  background-color: #e75d5c;
-  color: black;
-  border: none;
   border-radius: 5px;
-  cursor: pointer;
-`
+`;
 
 
 const Navbar = () => {
@@ -116,7 +118,7 @@ const Navbar = () => {
             </List>
         </Links>
         <Icons>
-          <Button>Contactame</Button>
+          <Button href='https://www.linkedin.com/in/nicolas-menendez-403b201a3/' target='_blank'>Contactarme</Button>
         </Icons>
       </Container>
     </Section>

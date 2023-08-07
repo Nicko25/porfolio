@@ -246,7 +246,7 @@ const Hero = () => {
             <Line src="./img/line.png"/>
             <Subtitle>Front-End Developer</Subtitle>
           </WhatWeDo>
-          <Desc>Diseño, desarrollo y mantengo aplicaciones con caracteristicas responsive que ofrezcan una experiencia fluida para los usuarios</Desc>
+          <Desc>Diseño, desarrollo y mantengo aplicaciones con caracteristicas responsive que ofrezcan una experiencia fluida para los usuarios.</Desc>
         </Left>
         <Right>
           <Img src="./img/nube.png"></Img>

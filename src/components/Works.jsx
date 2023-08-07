@@ -116,6 +116,7 @@ const Title = styled.h1`
 const TitleContainer = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
   gap: 20px;
 
   @media only screen and (max-width: 768px) {
@@ -160,8 +161,8 @@ const ListItem = styled.button`
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    height: 100px;
-    width: 350px;
+    height: 90px;
+    width: 340px;
     font-size: 40px;
     font-weight: 500;
     justify-content: center;

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Hero from './components/Hero'
 import Who from './components/Who'
 import Works from './components/Works'
+import Banner from './components/Banner'
 import { BrowserRouter } from 'react-router-dom';
 
 
@@ -100,9 +101,9 @@ function App() {
       <BackgroundDesign src="./img/bg2.png"></BackgroundDesign>
       <Container>
         <BrowserRouter>
-          <Hero/>
-          <Who/>
-          <Works/>
+          <Hero></Hero>
+          <Who></Who>
+          <Works></Works>
         </BrowserRouter>
       </Container>
     </Widescreen>

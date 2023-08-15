@@ -9,3 +9,6 @@ public/screen-transformed.glb
 public/smartphone-transformed.glb
 public/Checklist-Objetos-3D.txt
 public/arreglar.txt
+src/components/Banner.jsx
+src/components/Contact.jsx
+src/components/Cube.jsx

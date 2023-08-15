@@ -40,14 +40,13 @@ const Container = styled.div`
 const Info = styled.div`
   position: absolute;
   z-index: 1;
-  left: 0;
-  bottom: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: end;
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1400px) {
     display: none;
   }
 
@@ -63,13 +62,11 @@ const Flecha = styled.img`
 
   width: 240px;
   height: 240px;
-  transform: rotate(220deg) scaleX(-1);
+  transform: rotate(30deg) scaleX(-1);
   
 
   @media only screen and (max-width: 1400px) {
-    width: 160px;
-    height: 160px;
-    transform: rotate(210deg);
+    transform: rotate(-60deg) scaleX(-1);
   }
 
   @media only screen and (max-width: 768px) {
@@ -91,6 +88,12 @@ const Drag = styled.h2`
   font-size: 18px;
   transform: rotate(0deg);
 
+  @media only screen and (max-width: 1400px) {
+    top: 30%;
+    left: 190px;
+    
+  }
+
   @media only screen and (max-width: 768px) {
     font-size: 20px;
     bottom: 70px;
@@ -110,6 +113,11 @@ const Left = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  margin-right: 0;
+
+  @media only screen and (max-width: 1400px) {
+    height: auto;
+  }
 
   @media only screen and (max-width: 768px) {
     width: 100%;
@@ -130,8 +138,8 @@ const Right = styled.div`
   align-items: center;
   right: 0;
   width: 50%;
-  height: auto;
-
+  height: 50%;
+  margin-left: 0;
 
   @media only screen and (max-width: 768px) {
     width: 100%;
@@ -143,22 +151,32 @@ const Right = styled.div`
 
 `;
 
-const Img = styled.img`
-  width: 800px;
-  height: 600px;
+
+const CloudLeft = styled.img`
+  position: absolute;
+  width: 100%;
   object-fit: contain;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  margin: auto;
+  z-index: 0;
+
+  @media only screen and (max-width: 1400px) {
+    display: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+      display: none;
+  }
+
+`;
+
+const CloudRight = styled.img`
+  position: absolute;
+  width: 100%;
+  object-fit: contain;
   margin: auto;
   z-index: 0;
 
 
-  @media only screen and (max-width: 1400px) {
-    width: 100%;
-    height: 100%;
-  }
 
   @keyframes animate {
     from{
@@ -170,6 +188,7 @@ const Img = styled.img`
       transform: rotate3d(1,1,1,5deg) translateY(30px);
     }
   }
+
 `; 
 
 const Title = styled.h1`
@@ -181,6 +200,11 @@ const Title = styled.h1`
   }
   
   @media only screen and (max-width: 768px) {
+    padding-top: 60px;
+    font-size: 40px;
+  }
+
+  @media only screen and (max-height: 540px) {
     padding-top: 60px;
     font-size: 40px;
   }
@@ -201,10 +225,6 @@ const Line = styled.img`
 
 const Subtitle = styled.h2`
   color: #e75d5c;
-
-  @media only screen and (max-width: 768px) {
-    
-  }
   
 `;
 
@@ -212,6 +232,12 @@ const Desc = styled.p`
   font-size: 23px;
   font-weight: 400;
   color: lightgray;
+  z-index: 1;
+
+  @media only screen and (max-width: 1450px) {
+    color: #000000;
+    font-weight: 500;
+  }
 
   @media only screen and (max-width: 1400px) {
     padding: 10px;
@@ -219,7 +245,10 @@ const Desc = styled.p`
 
   @media only screen and (max-width: 768px) {
     font-size: 20px;
+  }
 
+  @media only screen and (max-height: 400px) {
+    font-size: 20px;
   }
 `;
 
@@ -241,15 +270,17 @@ const Hero = () => {
       <Navbar/> 
       <Container>
         <Left>
+          <CloudLeft src="./img/clouds.gif"></CloudLeft>
           <Title>¡Hola!, me llamo Nicolas</Title>
           <WhatWeDo>
             <Line src="./img/line.png"/>
             <Subtitle>Front-End Developer</Subtitle>
           </WhatWeDo>
           <Desc>Diseño, desarrollo y mantengo aplicaciones con caracteristicas responsive que ofrezcan una experiencia fluida para los usuarios.</Desc>
+          
         </Left>
         <Right>
-          <Img src="./img/nube.png"></Img>
+          <CloudRight src="./img/clouds.gif"></CloudRight>
           <Canvas  style={{position: 'absolute', animation: 'animate 1.5s infinite ease alternate'}} camera={{ position: [-8, 1.5, 8], fov: 25 } }>
             <group position={[1, -1.5, 0]}>
               <Center top>

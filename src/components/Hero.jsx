@@ -37,6 +37,67 @@ const Container = styled.div`
 
 `;
 
+const Frame = styled.div`
+  background: linear-gradient(253deg, #3E71ED, #2D89D6, #2D30D6);
+  background-size: 300% 300%;
+  animation-name: mover;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+
+
+
+  position: absolute;
+  max-width: 1400px;
+  width: 100%;
+  height: 60%;
+	border: 1rem solid #ffffff;
+	border-image: repeating-linear-gradient(45deg, transparent, transparent 5px, #ffffff 6px, #ffffff 15px, transparent 16px, transparent 20px) 20/1rem;
+  
+  @media only screen and (max-width: 1440px) {
+    width: 90%;
+  }
+
+  @-webkit-keyframes mover {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @-moz-keyframes mover {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @keyframes mover {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+
+`;
+
+
+
+
 const Info = styled.div`
   position: absolute;
   z-index: 1;
@@ -194,6 +255,7 @@ const CloudRight = styled.img`
 const Title = styled.h1`
   font-size: 70px;
   z-index: 0;
+  padding-left: 20px;
 
   @media only screen and (max-width: 1400px) {
     text-align: center;
@@ -217,6 +279,7 @@ const WhatWeDo = styled.div`
   gap: 10px;
   width: 100%;
   justify-content: left;
+  padding-left: 20px;
 `;
 
 const Line = styled.img`
@@ -233,6 +296,7 @@ const Desc = styled.p`
   font-weight: 400;
   color: lightgray;
   z-index: 1;
+  padding-left: 10px;
 
   @media only screen and (max-width: 1450px) {
     color: #000000;
@@ -267,34 +331,36 @@ const Hero = () => {
 
   return (
     <Section id='home'>
-      <Navbar/> 
+      <Navbar/>
+      <Frame></Frame> 
       <Container>
-        <Left>
-          <CloudLeft src="./img/clouds.gif"></CloudLeft>
-          <Title>¡Hola!, me llamo Nicolas</Title>
-          <WhatWeDo>
-            <Line src="./img/line.png"/>
-            <Subtitle>Front-End Developer</Subtitle>
-          </WhatWeDo>
-          <Desc>Diseño, desarrollo y mantengo aplicaciones con caracteristicas responsive que ofrezcan una experiencia fluida para los usuarios.</Desc>
+            <Left>
+              <CloudLeft src="./img/clouds.gif"></CloudLeft>
+              <Title>Bienvenidos, me llamo Nicolas</Title>
+              <WhatWeDo>
+                <Line src="./img/line.png"/>
+                <Subtitle>Front-End Developer</Subtitle>
+              </WhatWeDo>
+              <Desc>Diseño, desarrollo y mantengo aplicaciones con caracteristicas responsive que ofrezcan una experiencia fluida para los usuarios.</Desc>
+              
+            </Left>
+            <Right>
+              <CloudRight src="./img/clouds.gif"></CloudRight>
+              <Canvas  style={{position: 'absolute', animation: 'animate 1.5s infinite ease alternate'}} camera={{ position: [-8, 1.5, 8], fov: 25 } }>
+                <group position={[1, -1.5, 0]}>
+                  <Center top>
+                    <Plane rotation={[-0.0, 6.2, 0.5]} scale={4} />
+                  </Center>
+                </group>
+                <OrbitControls minPolarAngle={1.5} maxPolarAngle={2}  minAzimuthAngle={5.1} maxAzimuthAngle={0.5} enableZoom={false}/>
+                <Environment preset="sunset" />
+              </Canvas>
+              <Info>
+                <Flecha src="./img/arrow.gif"></Flecha>
+                <Drag>Drag It !</Drag>
+              </Info>
+            </Right>
           
-        </Left>
-        <Right>
-          <CloudRight src="./img/clouds.gif"></CloudRight>
-          <Canvas  style={{position: 'absolute', animation: 'animate 1.5s infinite ease alternate'}} camera={{ position: [-8, 1.5, 8], fov: 25 } }>
-            <group position={[1, -1.5, 0]}>
-              <Center top>
-                <Plane rotation={[-0.0, 6.2, 0.5]} scale={4} />
-              </Center>
-            </group>
-            <OrbitControls minPolarAngle={1.5} maxPolarAngle={2}  minAzimuthAngle={5.1} maxAzimuthAngle={0.5} enableZoom={false}/>
-            <Environment preset="sunset" />
-          </Canvas>
-          <Info>
-            <Flecha src="./img/arrow.gif"></Flecha>
-            <Drag>Drag It !</Drag>
-        </Info>
-        </Right>
       </Container>
     </Section>
   )

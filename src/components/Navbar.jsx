@@ -4,19 +4,16 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 
 const Section = styled.div`
-background-color: black;
     position: fixed;
     top: 0px;
     z-index: 1;
-    width: 1920px;
+    width: 100%;
+    max-width: 1400px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
 
-    @media only screen and (max-width: 1920px){
-      width: 100%;
-    }
 
     @media only screen and (max-width: 360px){
       width: 360px;

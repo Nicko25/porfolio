@@ -1,0 +1,11 @@
+[33mbbc6496[m[33m ([m[1;36mHEAD -> [m[1;32mcss-rework[m[33m, [m[1;31morigin/css-rework[m[33m)[m agregado de un border a hero
+[33m3a00cd2[m modificado de hero
+[33m4f23ce4[m cambios de las desc
+[33m5956d50[m elementos unselectable para el drag
+[33m7e45767[m modificaciones menores
+[33m1cc1863[m fix en Hero en donde Left estaba fuera de posicion
+[33m2fc5dd1[m cambiando el justificado a los Desc
+[33m584924c[m responsive fixes in Hero, Who and Works
+[33m064e6d2[m agregando diseno img
+[33mab94147[m ajustes a resoluciones y cambio de nombre de componentes
+[33meabe2ac[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m, [m[1;32mmain[m[33m)[m commit inicial

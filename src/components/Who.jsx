@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Trabajo from './trabajo';
 
 const Section = styled.div`
   position: relative;
@@ -21,25 +22,23 @@ const Container = styled.div`
   align-items: center;
   height: 100%;
   width: 1400px;
+  gap: 10px;
 
-  @media only screen and (max-width: 1440px) {
-    width: 90%;
-  }
   
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1000px) {
       flex-direction: column-reverse;
   }
 `;
 
 const Left = styled.div`
-  display: flex;
-  width: 50%;
+  width: 60%;
 
   @media only screen and (max-width: 1400px) {
     padding-left: 10px;
     align-items: center;
   }
-  @media only screen and (max-width: 720px) {
+
+  @media only screen and (max-width: 600px) {
     display: none;
   }
 
@@ -57,26 +56,24 @@ const Right = styled.div`
   justify-content: center;
   align-items: left;
 
-  @media only screen and (max-width: 720px) {
-    height: 100%;
-    width: 100%;
-  }
-
   @media only screen and (max-height: 740px) {
     height: 100%;
     width: 100%;
   }
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+
+
+
 `;
 
+
+
+
 const Img = styled.img`
-  object-fit: contain;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index: 0;
-  
+
 
   @media only screen and (max-width: 1400px) {
 
@@ -162,7 +159,7 @@ const Who = () => {
     <Section id='who'>
       <Container>
         <Left>
-          <Img src="./img/trabajo.png"></Img>
+          <Trabajo></Trabajo>
         </Left>
         <Right>
           <Title>Analiza. Planea. Diseña. Optimiza. </Title>

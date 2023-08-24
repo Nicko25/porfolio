@@ -149,42 +149,20 @@ const List = styled.ul`
 `;
 
 
+const Button = styled.button` 
 
-const ListItem = styled.button` 
-    align-items: center;
-    appearance: none;
-    background-image: radial-gradient(100% 100% at 100% 0, #32d2ff 0, #3b51fd 100%);
-    border: 0;
-    border-radius: 5px;
-    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-flex;
-    height: 90px;
-    width: 340px;
-    font-size: 40px;
-    font-weight: 500;
-    justify-content: center;
-    line-height: 1;
-    list-style: none;
-    overflow: hidden;
-    padding-left: 16px;
-    padding-right: 16px;
-    position: relative;
-    text-align: left;
-    text-decoration: none;
-    transition: box-shadow .15s,transform .15s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    will-change: box-shadow,transform;
 
-    @media only screen and (max-width: 1000px) {
-      height: 80px;
-      width: 300px;
-      font-size: 33px;
+  :hover{
+
+  }
+  :active{
+    
+  }
+
+  @media only screen and (max-width: 1000px) {
+    height: 80px;
+    width: 300px;
+    font-size: 33px;
 
   }  
 
@@ -195,21 +173,6 @@ const ListItem = styled.button`
     gap: 2px;
   }
 
-  
-
-  :focus{
-    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-  }
-
-  :hover{
-    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-    transform: translateY(-2px);
-    color: #d5d5d5;
-  }
-  :active{
-    box-shadow: #3c4fe0 0 3px 7px inset;
-    transform: translateY(2px);
-  }
 `;
 
 const Works = () => {
@@ -224,9 +187,9 @@ const Works = () => {
           </TitleContainer>
           <List>
             {data.map((item) => (
-              <ListItem key={item} text={item} onClick={() => setWork(item)}>
+              <Button key={item} text={item} onClick={() => setWork(item)}>
                 {item}
-              </ListItem>
+              </Button>
             ))}
           </List>
         </Top>

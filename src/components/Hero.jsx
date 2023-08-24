@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stage , Center , AccumulativeShadows, RandomizedLight, Environment} from "@react-three/drei";
 import Plane from "./Plane";
+import MouseIcon from './MouseIcon';
 
 
 
@@ -30,6 +31,7 @@ const Container = styled.div`
 
   @media only screen and (max-width: 768px) {
       flex-direction: column;
+      justify-content: center;
   }
   @media only screen and (max-height: 590px) {
       flex-direction: row;
@@ -49,12 +51,23 @@ const Frame = styled.div`
   position: absolute;
   max-width: 1400px;
   width: 100%;
-  height: 60%;
+  height: 70%;
 	border: 1rem solid #ffffff;
 	border-image: repeating-linear-gradient(45deg, transparent, transparent 5px, #ffffff 6px, #ffffff 15px, transparent 16px, transparent 20px) 20/1rem;
   
   @media only screen and (max-width: 1440px) {
     width: 90%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    height: 80%;
+    border: none;
+    background: none;
+  }
+
+  @media only screen and (max-height: 465px) {
+    border: none;
+    background: none;
   }
 
   @-webkit-keyframes mover {
@@ -193,7 +206,7 @@ const Right = styled.div`
   -ms-user-select: none;
   user-select: none;
 
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -202,12 +215,12 @@ const Right = styled.div`
   height: 50%;
   margin-left: 0;
 
+  
+
   @media only screen and (max-width: 768px) {
+    position: relative;
     width: 100%;
     height: 50%;
-    position: relative;
-    justify-content: center;
-    padding-left: 50px;
   }
 
 `;
@@ -228,6 +241,14 @@ const CloudLeft = styled.img`
       display: none;
   }
 
+  @media only screen and (max-height: 780px) {
+    margin: -5% 0% 0% 0%;
+  }
+
+  @media only screen and (max-height: 730px) {
+    display: none;
+  }
+
 `;
 
 const CloudRight = styled.img`
@@ -237,7 +258,21 @@ const CloudRight = styled.img`
   margin: auto;
   z-index: 0;
 
+  @media only screen and (max-height: 780px) {
+    margin: -5% 0% 0% 0%;
+  }
 
+  @media only screen and (max-height: 730px) {
+    margin: -15% 0% 0% 0%;
+  }
+
+  @media only screen and (max-height: 670px) {
+    margin: -25% 0% 0% 0%;
+  }
+
+  @media only screen and (max-height: 590px) {
+    display: none
+  }
 
   @keyframes animate {
     from{
@@ -258,17 +293,19 @@ const Title = styled.h1`
   padding-left: 20px;
 
   @media only screen and (max-width: 1400px) {
-    text-align: center;
+    font-size: 60px;
   }
   
   @media only screen and (max-width: 768px) {
     padding-top: 60px;
     font-size: 40px;
+    text-align: left;
   }
 
   @media only screen and (max-height: 540px) {
     padding-top: 60px;
     font-size: 40px;
+    
   }
 `;
 
@@ -298,10 +335,6 @@ const Desc = styled.p`
   z-index: 1;
   padding-left: 10px;
 
-  @media only screen and (max-width: 1450px) {
-    color: #000000;
-    font-weight: 500;
-  }
 
   @media only screen and (max-width: 1400px) {
     padding: 10px;
@@ -360,8 +393,8 @@ const Hero = () => {
                 <Drag>Drag It !</Drag>
               </Info>
             </Right>
-          
       </Container>
+      <MouseIcon/>
     </Section>
   )
 }

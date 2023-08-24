@@ -32,13 +32,16 @@ const Ventanal = styled.img`
 const VentanalNoche = styled.img`
   position: absolute;
   opacity: 0;
-  animation: fadeIn 8s infinite;
+  animation: fadeIn 6s infinite;
 
   @keyframes fadeIn {
     0%  {
       opacity: 0;
     }
     50% {
+      opacity: 1;
+    }
+    75% {
       opacity: 1;
     }
     100% {

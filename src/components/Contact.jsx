@@ -60,11 +60,11 @@ const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
   padding: 20px;
-`
+`;
 
 const Right = styled.div`
   flex: 1;
-`
+`;
 
 const Contact = () => {
 

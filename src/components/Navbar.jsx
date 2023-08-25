@@ -40,12 +40,12 @@ const Container = styled.div`
 const Links = styled.div`
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
 `
 
 const Logo = styled.img`
 display: flex;
-height: 50px;
+height: 40px;
 
 @media only screen and (max-width: 450px) {
       display: none;
@@ -95,7 +95,7 @@ const Button = styled.a`
   font-weight: 400;
   font-size: 15px;
   color: black;
-  width: 100px;
+  width: 80px;
   padding: 10px;
   border-radius: 5px;
 `;
@@ -107,7 +107,7 @@ const Navbar = () => {
     <Section>
       <Container>
         <Links>
-          <Logo src="./img/logo.png"></Logo>
+          <Logo src="./img/arrow.png"></Logo>
             <List>
               <ListItem to='#home'>Inicio</ListItem>
               <ListItem to='#who'>Sobre Mi</ListItem>
@@ -115,7 +115,7 @@ const Navbar = () => {
             </List>
         </Links>
         <Icons>
-          <Button href='https://www.linkedin.com/in/nicolas-menendez-403b201a3/' target='_blank'>Contactarme</Button>
+          <Button href='https://www.linkedin.com/in/nico-menendez/' target='_blank'>Contacto</Button>
         </Icons>
       </Container>
     </Section>

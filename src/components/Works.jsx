@@ -44,12 +44,12 @@ const Container = styled.div`
 `;
 
 const Top = styled.div`
-  gap: 10px;
   width: 100%;
   height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   @media only screen and (max-width: 1440px) {
     position: relative;
@@ -66,7 +66,6 @@ const Bottom = styled.div`
   -ms-user-select: none;
   user-select: none;
 
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,13 +75,7 @@ const Bottom = styled.div`
   @media only screen and (max-width: 480px) {
     height: 40%;
   }
-
-  @media only screen and (max-height: 740px){
-    
-  }
 `;
-
-
 
 const CanvasContainer = styled.div`
   position: absolute;
@@ -132,7 +125,6 @@ const List = styled.ul`
   display: flex;
   flex-direction: row;
   gap: 20px;
-  padding-bottom: 10px;
 
   @media only screen and (max-width: 768px) {
     gap: 10px;
@@ -148,31 +140,146 @@ const List = styled.ul`
   }
 `;
 
+const TopMenu = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1400px;
+  height: 70px;
 
-const Button = styled.button` 
+`;
 
+const Center = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 60px;
+  
+`;
 
-  :hover{
+const Btn = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 60px;
+  cursor: pointer;
+  background: #cbcbcb6c;
+  border: 1px solid #fff;
+  outline: none;
+  transition: 1s ease-in-out;
+  margin: 0px;
+  padding: 0px;
 
+  svg{
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
   }
-  :active{
-    
+  :hover svg {
+    stroke-dashoffset: -480;
   }
+`;
 
-  @media only screen and (max-width: 1000px) {
-    height: 80px;
-    width: 300px;
-    font-size: 33px;
+const SvgButton = styled.svg`
+  position: absolute;
+  width: 200px;
+  height: 60px;
+`;
 
-  }  
+const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #ffffff68;
+  justify-content: center;
+  width: 40px;
+  height: 60px;
+`;
 
-  @media only screen and (max-width: 768px) {
-    height: 60px;
-    width: 200px;
-    font-size: 28px;
-    gap: 2px;
+const SpanContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 60px;
+`;
+
+const LogoButton = styled.img`
+  width: 25px;
+  height: 25px;
+`;
+
+const SpanText = styled.span`
+  position: absolute;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+
+  :hover {
+    transition: 1s ease-in-out;
+    color: #d4d3d3;
   }
+`;
 
+
+
+const BottomMenu = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid white;
+  width: 1450px;
+  height: 560px;
+  bottom: 20px;
+
+
+  background: linear-gradient(253deg, #3E71ED, #2D89D6, #2D30D6);
+  background-size: 300% 300%;
+  animation-name: mover;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+
+
+  @-webkit-keyframes mover {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @-moz-keyframes mover {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @keyframes mover {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
 `;
 
 const Works = () => {
@@ -185,15 +292,37 @@ const Works = () => {
           <TitleContainer>
             <Title>Mis trabajos</Title>
           </TitleContainer>
-          <List>
-            {data.map((item) => (
-              <Button key={item} text={item} onClick={() => setWork(item)}>
-                {item}
-              </Button>
-            ))}
-          </List>
+          <TopMenu>
+            <List>
+              {data.map((item) => (
+                <Center key={item} text={item} onClick={() => setWork(item)}>
+                  <Btn>
+                    <SvgButton viewBox="0 0 200 60">
+                      <polyline points="199,1 199,59 1,59 1,1 167,1" />
+                      <polyline points="199,1 199,59 1,59 1,1 167,1"/>
+                    </SvgButton>
+                    <LogoContainer>
+                      {item === "Web Design" ? (
+                        <LogoButton src="./img/monitor.png"></LogoButton>
+                      ) 
+                      : item === "Development" ? (
+                        <LogoButton src="./img/smartphone.png"></LogoButton>
+                      ) 
+                      : (
+                        <LogoButton src="./img/chip.png"></LogoButton>
+                      )}
+                    </LogoContainer>
+                    <SpanContainer>
+                      <SpanText>{item}</SpanText>
+                    </SpanContainer>
+                  </Btn>
+                </Center>
+              ))}
+            </List>
+          </TopMenu>
         </Top>
         <Bottom>
+          <BottomMenu/>
             {work === "Web Design" ? (
               <WebDesign/>
             ) : work === "Development" ? (

@@ -6,6 +6,8 @@ import styled from "styled-components";
 
 const DescContainer = styled.div`
   position: absolute;
+  background: #cbcbcb6c;
+  border-radius: 5px;
   z-index: 2;
   width: 100%;
   height: fit-content;
@@ -40,6 +42,7 @@ const Line = styled.img`
 `;
 
 const Subtitle = styled.h2`
+  font-size: 24px;
   color: #e75d5c;
 `;
 

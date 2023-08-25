@@ -6,6 +6,8 @@ import Screen from "./Screen";
 
 const DescContainer = styled.div`
   position: absolute;
+  background: #cbcbcb6c;
+  border-radius: 5px;
   z-index: 2;
   width: 100%;
   height: fit-content;
@@ -28,6 +30,7 @@ const DescContainer = styled.div`
 
 const TitleContainer = styled.div`
   display: flex;
+  
   height: fit-content;
   width: fit-content;
   justify-content: center;
@@ -40,6 +43,7 @@ const Line = styled.img`
 `;
 
 const Subtitle = styled.h2`
+  font-size: 24px;
   color: #e75d5c;
 `;
 

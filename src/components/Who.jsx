@@ -22,7 +22,7 @@ const Container = styled.div`
   align-items: center;
   height: 100%;
   width: 1400px;
-  gap: 10px;
+  gap: 60px;
 
   
   @media only screen and (max-width: 1000px) {

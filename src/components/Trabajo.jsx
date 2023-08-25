@@ -29,30 +29,6 @@ const Ventanal = styled.img`
     width: 600px;
   }
 `;
-const VentanalNoche = styled.img`
-  position: absolute;
-  opacity: 0;
-  animation: fadeIn 6s infinite;
-
-  @keyframes fadeIn {
-    0%  {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    75% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @media only screen and (max-width: 1400px){
-    width: 600px;
-  }
-`;
 
 const Trabajadores = styled.img`
   position: absolute;
@@ -69,7 +45,6 @@ const Trabajo = () => {
       <Container>
         <Video src={videoTrabajo} autoPlay loop muted> </Video>
         <Ventanal src="/trabajo/ventanal.png"/>
-        <VentanalNoche src="/trabajo/ventanal_noche.png"/>
         <Trabajadores src="/trabajo/trabajo.png"/>
       </Container>
   );

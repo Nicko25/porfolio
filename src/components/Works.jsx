@@ -183,12 +183,13 @@ const Btn = styled.button`
   width: 200px;
   height: 60px;
   cursor: pointer;
-  background: #cbcbcb6c;
-  border: 1px solid #fff;
+  background: #b1b1b16c;
+  border: 1px solid #ffffff;
   outline: none;
   transition: 1s ease-in-out;
   margin: 0px;
   padding: 0px;
+
 
   svg{
     fill: none;
@@ -211,7 +212,7 @@ const SvgButton = styled.svg`
 const LogoContainer = styled.div`
   display: flex;
   align-items: center;
-  border-right: 1px solid #ffffff68;
+  border-right: 1px solid #d1d1d183;
   justify-content: center;
   width: 40px;
   height: 60px;
@@ -238,7 +239,7 @@ const SpanText = styled.span`
 
   :hover {
     transition: 1s ease-in-out;
-    color: #d4d3d3;
+    color: #e75d5c;
   }
 `;
 
@@ -247,11 +248,12 @@ const BottomMenu = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
-  border: 1px solid white;
   width: 1450px;
   height: 55%;
-  bottom: 80px;
+  bottom: 50px;
+  border: 1rem solid #ffffff;
+	border-image: repeating-linear-gradient(45deg, transparent, transparent 5px, #ffffff 6px, #ffffff 15px, transparent 16px, transparent 20px) 20/1rem;
+  
 
 
   background: linear-gradient(253deg, #3E71ED, #2D89D6, #2D30D6);
@@ -312,6 +314,7 @@ const BottomMenu = styled.div`
       background-position: 0% 50%
     }
   }
+
 `;
 
 const Works = () => {
@@ -335,13 +338,13 @@ const Works = () => {
                     </SvgButton>
                     <LogoContainer>
                       {item === "Web Design" ? (
-                        <LogoButton src="./img/monitor.png"></LogoButton>
+                        <LogoButton src="./img/monitor_black.png"></LogoButton>
                       ) 
                       : item === "Development" ? (
-                        <LogoButton src="./img/smartphone.png"></LogoButton>
+                        <LogoButton src="./img/smartphone_black.png"></LogoButton>
                       ) 
                       : (
-                        <LogoButton src="./img/chip.png"></LogoButton>
+                        <LogoButton src="./img/chip_black.png"></LogoButton>
                       )}
                     </LogoContainer>
                     <SpanContainer>

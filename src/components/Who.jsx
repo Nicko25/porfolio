@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Trabajo from './trabajo';
+import MouseIcon from './MouseIcon';
 
 const Section = styled.div`
   position: relative;
@@ -33,6 +34,31 @@ const Container = styled.div`
   @media only screen and (max-width: 1000px) {
       flex-direction: column-reverse;
   }
+`;
+
+const Frame = styled.div`
+  position: absolute;
+  max-width: 1500px;
+  width: 100%;
+  height: 65%;
+	border: 1rem solid #ffffff;
+	border-image: repeating-linear-gradient(45deg, transparent, transparent 5px, #ffffff 6px, #ffffff 15px, transparent 16px, transparent 20px) 20/1rem;
+  
+  @media only screen and (max-width: 1440px) {
+    width: 90%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    height: 80%;
+    border: none;
+    background: none;
+  }
+
+  @media only screen and (max-height: 465px) {
+    border: none;
+    background: none;
+  }
+
 `;
 
 const Left = styled.div`
@@ -157,6 +183,7 @@ const Button = styled.a`
 const Who = () => {
   return (
     <Section id='who'>
+      <Frame></Frame> 
       <Container>
         <Left>
           <Trabajo></Trabajo>
@@ -173,6 +200,7 @@ const Who = () => {
           </DescContainer>
         </Right>
       </Container>
+      <MouseIcon/>
     </Section>
   )
 }

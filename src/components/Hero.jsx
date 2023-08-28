@@ -359,6 +359,24 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
+const DescContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: #cbcbcb6c;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 0 10px;
+  
+
+  @media only screen and (max-width: 1400px) {
+
+  }
+  @media only screen and (max-width: 768px) {
+    right: auto;
+    justify-content: end;
+  }
+`;
+
 const Hero = () => {
 
 
@@ -370,12 +388,13 @@ const Hero = () => {
             <Left>
               <CloudLeft src="./img/clouds.gif"></CloudLeft>
               <Title>Bienvenidos, me llamo Nicolas</Title>
-              <WhatWeDo>
-                <Line src="./img/line.png"/>
-                <Subtitle>Front-End Developer</Subtitle>
-              </WhatWeDo>
-              <Desc>Diseño, desarrollo y mantengo aplicaciones con caracteristicas responsive que ofrezcan una experiencia fluida para los usuarios.</Desc>
-              
+              <DescContainer>
+                <WhatWeDo>
+                  <Line src="./img/line.png"/>
+                  <Subtitle>Front-End Developer</Subtitle>
+                </WhatWeDo>
+                <Desc>Diseño, desarrollo y mantengo aplicaciones con caracteristicas responsive que ofrezcan una experiencia fluida para los usuarios.</Desc>
+              </DescContainer>
             </Left>
             <Right>
               <CloudRight src="./img/clouds.gif"></CloudRight>

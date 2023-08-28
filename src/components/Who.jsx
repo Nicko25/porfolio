@@ -24,6 +24,11 @@ const Container = styled.div`
   width: 1400px;
   gap: 60px;
 
+
+  @media only screen and (max-width: 1440px) {
+    gap: 0px;
+  }
+
   
   @media only screen and (max-width: 1000px) {
       flex-direction: column-reverse;
@@ -33,12 +38,11 @@ const Container = styled.div`
 const Left = styled.div`
   width: 60%;
 
-  @media only screen and (max-width: 1400px) {
-    padding-left: 10px;
+  @media only screen and (max-width: 1440px) {
     align-items: center;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 640px) {
     display: none;
   }
 
@@ -56,6 +60,11 @@ const Right = styled.div`
   justify-content: center;
   align-items: left;
 
+  @media only screen and (max-height: 1440px) {
+    width: 50%;
+  }
+
+
   @media only screen and (max-height: 740px) {
     height: 100%;
     width: 100%;
@@ -65,31 +74,17 @@ const Right = styled.div`
     width: 100%;
   }
 
-
-
 `;
-
-
-
-
-const Img = styled.img`
-
-
-  @media only screen and (max-width: 1400px) {
-
-  }
-`;
-
 
 const Title = styled.h1`
   font-size: 74px;
   text-align: center;
 
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 1440px) {
     font-size: 55px;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1000px) {
     font-size: 40px;
   }
 `;
@@ -97,11 +92,16 @@ const Title = styled.h1`
 const DescContainer = styled.div`
   display: flex;
   flex-direction: column;
+  background: #cbcbcb6c;
+  border-radius: 5px;
+  padding: 10px;
+  
   
 
   @media only screen and (max-width: 1400px) {
     padding-left: 10px;
     padding: 15px;
+    margin: 10px;
   }
   @media only screen and (max-width: 768px) {
     right: auto;

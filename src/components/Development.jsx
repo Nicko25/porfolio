@@ -11,20 +11,26 @@ const DescContainer = styled.div`
   z-index: 2;
   width: 100%;
   height: fit-content;
-  top: 40%;
+  top: 43%;
   display: flex;
   flex-direction: column;
   padding: 10px;
 
-
-  @media only screen and (max-width: 768px) {
-    position: relative;
-    top: 0px;
+  @media only screen and (max-width: 1440px) {
+    width: 95%;
   }
 
-  @media only screen and (max-height: 740px) {
-    position: relative;
-    top: 0px;
+  @media only screen and (max-width: 768px) {
+    top: 400px
+  }
+
+  @media only screen and (max-height: 610px) {
+    top: 60%;
+  }
+
+  /* rotated smartphones*/
+  @media only screen and (max-height: 465px) {
+    top: 230px;
   }
 `;
 
@@ -59,8 +65,8 @@ const Desc = styled.p`
 `;
 
 const CanvasContainer = styled.div`
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 80%;
 
   @media only screen and (max-width: 768px) {
     display: none;

@@ -107,7 +107,6 @@ const Navbar = () => {
     <Section>
       <Container>
         <Links>
-          <Logo src="./img/arrow.png"></Logo>
             <List>
               <ListItem to='#home'>Inicio</ListItem>
               <ListItem to='#who'>Sobre Mi</ListItem>

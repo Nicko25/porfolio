@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stage , Center , AccumulativeShadows, RandomizedLight, Environment} from "@react-three/drei";
 import Plane from "./Plane";
-import MouseIcon from './MouseIcon';
+import MouseIconDown from './MouseIconDown';
 
 
 
@@ -187,15 +187,24 @@ const Left = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-right: 0;
 
-  @media only screen and (max-width: 1400px) {
-    height: auto;
+
+  ::before{
+    content : "";
+    position: absolute;
+    right: 0;
+    top: 50px;
+    height: 55%;
+    border-right: 1px solid #ffffff69;
   }
 
   @media only screen and (max-width: 768px) {
     width: 100%;
     justify-content: center;
+
+    ::before {
+    border-right: none;
+  }
   }
 `;
 
@@ -214,7 +223,6 @@ const Right = styled.div`
   width: 50%;
   height: 50%;
   margin-left: 0;
-
   
 
   @media only screen and (max-width: 768px) {
@@ -304,7 +312,7 @@ const Title = styled.h1`
 
   @media only screen and (max-height: 540px) {
     padding-top: 60px;
-    font-size: 40px;
+    font-size: 35px;
     
   }
 `;
@@ -316,7 +324,7 @@ const WhatWeDo = styled.div`
   gap: 10px;
   width: 100%;
   justify-content: left;
-  padding-left: 20px;
+  padding-left: 10px;
 `;
 
 const Line = styled.img`
@@ -364,7 +372,7 @@ const DescContainer = styled.div`
   flex-direction: column;
   background: #cbcbcb6c;
   border-radius: 5px;
-  padding: 3px;
+  padding: 5px 0px;
   margin: 0 10px;
   
 
@@ -413,7 +421,7 @@ const Hero = () => {
               </Info>
             </Right>
       </Container>
-      <MouseIcon/>
+      <MouseIconDown/>
     </Section>
   )
 }

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Development from './Development'
 import Automation from './Automation'
 import WebDesign from './WebDesign'
+import MouseIconUp from './MouseIconUp';
 
 const data = [
   "Web Design",
@@ -253,8 +254,6 @@ const BottomMenu = styled.div`
   bottom: 50px;
   border: 1rem solid #ffffff;
 	border-image: repeating-linear-gradient(45deg, transparent, transparent 5px, #ffffff 6px, #ffffff 15px, transparent 16px, transparent 20px) 20/1rem;
-  
-
 
   background: linear-gradient(253deg, #3E71ED, #2D89D6, #2D30D6);
   background-size: 300% 300%;
@@ -268,7 +267,8 @@ const BottomMenu = styled.div`
 
   @media only screen and (max-width: 1440px) {
     width: 100%;
-    height: 50%;
+    height: 52%;
+    bottom: 80px;
   }
 
   @media only screen and (max-width: 768px) {
@@ -367,6 +367,7 @@ const Works = () => {
             )}
         </Bottom>
       </Container>
+      <MouseIconUp/>
     </Section>
   )
 }

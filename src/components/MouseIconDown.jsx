@@ -5,6 +5,10 @@ const Container = styled.div`
   position: absolute;
   right: 50px;
   bottom: 30px;
+
+  @media only screen and (max-width: 1440px) {
+    display: none;
+  }
 `;
 
 const Scrolldown = styled.div`

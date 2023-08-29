@@ -23,7 +23,8 @@ const Section = styled.div`
 const Container = styled.div`
     position: absolute;
     display: flex;
-    width: 100%; // le asigna el tamaño al container
+    background-color: black;
+    width: 100%;
     height: 100%;
     justify-content: space-between;
     align-items: center;
@@ -41,6 +42,7 @@ const Links = styled.div`
   display: flex;
   align-items: center;
   gap: 30px;
+  padding-left: 20px;
 `
 
 const Logo = styled.img`

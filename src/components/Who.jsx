@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Trabajo from './trabajo';
-import MouseIcon from './MouseIcon';
+import MouseIconDown from './MouseIconDown';
+import MouseIconUp from './MouseIconUp';
 
 const Section = styled.div`
   position: relative;
@@ -27,7 +28,7 @@ const Container = styled.div`
 
 
   @media only screen and (max-width: 1440px) {
-    gap: 0px;
+    padding: 0 50px 0 100px;
   }
 
   
@@ -48,10 +49,13 @@ const Frame = styled.div`
     width: 90%;
   }
 
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
+
   @media only screen and (max-width: 768px) {
     height: 80%;
-    border: none;
-    background: none;
+    display: none;
   }
 
   @media only screen and (max-height: 465px) {
@@ -66,6 +70,7 @@ const Left = styled.div`
 
   @media only screen and (max-width: 1440px) {
     align-items: center;
+    width: 40%;
   }
 
   @media only screen and (max-width: 640px) {
@@ -107,7 +112,7 @@ const Title = styled.h1`
   text-align: center;
 
   @media only screen and (max-width: 1440px) {
-    font-size: 55px;
+    font-size: 50px;
   }
 
   @media only screen and (max-width: 1000px) {
@@ -183,7 +188,7 @@ const Button = styled.a`
 const Who = () => {
   return (
     <Section id='who'>
-      <Frame></Frame> 
+      <Frame></Frame>
       <Container>
         <Left>
           <Trabajo></Trabajo>
@@ -200,7 +205,8 @@ const Who = () => {
           </DescContainer>
         </Right>
       </Container>
-      <MouseIcon/>
+      <MouseIconUp/>
+      <MouseIconDown/>
     </Section>
   )
 }

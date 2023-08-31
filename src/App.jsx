@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import Hero from './components/Hero'
 import Who from './components/Who'
 import Works from './components/Works'
-import Banner from './components/Banner'
 import { BrowserRouter } from 'react-router-dom';
 
 
@@ -10,12 +9,14 @@ const BackgroundDesign = styled.img`
   position: fixed;
   width: 1920px;
   height: 1080px;
+  
   @media only screen and (min-width: 1921px){
     display: none;
   }
   @media only screen and (min-height: 1081px){
     display: none;
   }
+  
 `
 
 const Background = styled.div`

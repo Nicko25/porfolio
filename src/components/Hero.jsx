@@ -1,11 +1,10 @@
-import React , {useRef} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Navbar from './Navbar'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Stage , Center , AccumulativeShadows, RandomizedLight, Environment} from "@react-three/drei";
+import { OrbitControls, Center, Environment} from "@react-three/drei";
 import Plane from "./Plane";
 import MouseIconDown from './MouseIconDown';
-
 
 
 const Section = styled.div`
@@ -45,15 +44,14 @@ const Frame = styled.div`
   animation-name: mover;
   animation-duration: 10s;
   animation-iteration-count: infinite;
-
-
+  border: 1rem solid #ffffff;
+	border-image: repeating-linear-gradient(45deg, transparent, transparent 5px, #ffffff 6px, #ffffff 15px, transparent 16px, transparent 20px) 20/1rem;
 
   position: absolute;
   max-width: 1400px;
   width: 100%;
   height: 70%;
-	border: 1rem solid #ffffff;
-	border-image: repeating-linear-gradient(45deg, transparent, transparent 5px, #ffffff 6px, #ffffff 15px, transparent 16px, transparent 20px) 20/1rem;
+
   
   @media only screen and (max-width: 1440px) {
     width: 90%;
@@ -108,9 +106,6 @@ const Frame = styled.div`
 
 `;
 
-
-
-
 const Info = styled.div`
   position: absolute;
   z-index: 1;
@@ -128,6 +123,7 @@ const Info = styled.div`
     display: none;
   }
 `;
+
 const Flecha = styled.img`
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -188,26 +184,11 @@ const Left = styled.div`
   align-items: center;
   gap: 10px;
 
-
-  ::before{
-    content : "";
-    position: absolute;
-    right: 0;
-    top: 50px;
-    height: 55%;
-    border-right: 1px solid #ffffff69;
-  }
-
   @media only screen and (max-width: 768px) {
     width: 100%;
     justify-content: center;
-
-    ::before {
-    border-right: none;
-  }
   }
 `;
-
 
 const Right = styled.div`
   -webkit-user-select: none;
@@ -374,11 +355,7 @@ const DescContainer = styled.div`
   border-radius: 5px;
   padding: 5px 0px;
   margin: 0 10px;
-  
 
-  @media only screen and (max-width: 1400px) {
-
-  }
   @media only screen and (max-width: 768px) {
     right: auto;
     justify-content: end;

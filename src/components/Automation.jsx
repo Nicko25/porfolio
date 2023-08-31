@@ -15,7 +15,7 @@ const Img = styled.img`
   -ms-user-select: none;
   user-select: none;
 
-  width: 540px;
+  width: 400px;
   height: 300px;
   z-index: 1;
   margin: auto;
@@ -29,8 +29,8 @@ const Img = styled.img`
   }
   
   @media only screen and (max-width: 1400px) {
-    width: 540px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
   }
   @media only screen and (max-width: 768px) {
     display: none;
@@ -43,7 +43,7 @@ const Img = styled.img`
 
 const DescContainer = styled.div`
   position: absolute;
-  background: #cbcbcb6c;
+  background: #b1b1b16c;
   border-radius: 5px;
   z-index: 2;
   width: 100%;

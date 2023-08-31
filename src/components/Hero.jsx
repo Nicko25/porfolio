@@ -17,6 +17,7 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
+
   position: relative;
   display: flex;
   flex-direction: row;
@@ -32,8 +33,10 @@ const Container = styled.div`
       flex-direction: column;
       justify-content: center;
   }
+
   @media only screen and (max-height: 590px) {
-      flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
   }
 
 `;
@@ -184,9 +187,24 @@ const Left = styled.div`
   align-items: center;
   gap: 10px;
 
+  @media only screen and (max-width: 1400px) {
+    height: none;
+    bottom: 60px;
+  }
+
   @media only screen and (max-width: 768px) {
     width: 100%;
+    top: 40px;
+    bottom: none;
     justify-content: center;
+  }
+
+  @media only screen and (max-height: 590px) {
+      width: 100%;
+  }
+
+  @media only screen and (max-height: 450px) {
+    top: 0px;
   }
 `;
 
@@ -210,6 +228,10 @@ const Right = styled.div`
     position: relative;
     width: 100%;
     height: 50%;
+  }
+
+  @media only screen and (max-height: 590px) {
+      display: none;
   }
 
 `;
@@ -351,7 +373,7 @@ const Button = styled.button`
 const DescContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background: #cbcbcb6c;
+  background: #b1b1b16c;
   border-radius: 5px;
   padding: 5px 0px;
   margin: 0 10px;

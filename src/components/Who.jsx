@@ -123,7 +123,7 @@ const Title = styled.h1`
 const DescContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background: #cbcbcb6c;
+  background: #b1b1b16c;
   border-radius: 5px;
   padding: 10px;
   

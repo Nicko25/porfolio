@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const DescContainer = styled.div`
   position: absolute;
-  background: #cbcbcb6c;
+  background: #b1b1b16c;
   border-radius: 5px;
   z-index: 2;
   width: 100%;

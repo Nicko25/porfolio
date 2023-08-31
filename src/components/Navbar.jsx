@@ -43,6 +43,7 @@ const Links = styled.div`
   align-items: center;
   gap: 30px;
   padding-left: 20px;
+
 `
 
 const Logo = styled.img`
@@ -62,7 +63,7 @@ const List = styled.ul`
   align-items: center;
 
   @media only screen and (max-width: 450px) {
-
+    gap: 10px;
       
     }
 `
@@ -111,8 +112,8 @@ const Navbar = () => {
         <Links>
             <List>
               <ListItem to='#home'>Inicio</ListItem>
-              <ListItem to='#who'>Sobre Mi</ListItem>
-              <ListItem to='#works'>Proyectos</ListItem>
+              <ListItem to='#who'>Proyectos</ListItem>
+              <ListItem to='#works'>Sobre mi</ListItem>
             </List>
         </Links>
         <Icons>

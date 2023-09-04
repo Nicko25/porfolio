@@ -3,15 +3,15 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/smartphone-transformed.glb')
-  const [rotationY, setRotationY] = useState(3.15);
+  const [rotationY, setRotationY] = useState(3.15); //posicion inicial
   const [direction, setDirection] = useState(1); // 1 para incrementar, -1 para decrementar
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (rotationY >= 3.9) {
-        setDirection(-1); // Cambia la dirección cuando llega a 0.9
+        setDirection(-1); // Cambia la dirección cuando llega a 3.9
       } else if (rotationY <= 2.3) {
-        setDirection(1); // Cambia la dirección cuando llega a -0.9
+        setDirection(1); // Cambia la dirección cuando llega a 2.3
       }
 
       setRotationY(rotationY + direction * 0.01);

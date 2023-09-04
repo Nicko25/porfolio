@@ -12,21 +12,25 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media only screen and (max-width: 1440px){
-  }
 `;
 
 const Video = styled.video`
-  @media only screen and (max-width: 1440px){
+  @media only screen and (max-width: 1550px){
     width: 300px;
+  }
+  @media only screen and (max-width: 420px){
+    width: 240px;
   }
 `;
 
 const Ventanal = styled.img`
   position: absolute;
   
-  @media only screen and (max-width: 1440px){
+  @media only screen and (max-width: 1550px){
     width: 500px;
+  }
+  @media only screen and (max-width: 420px){
+    width: 360px;
   }
 `;
 
@@ -34,8 +38,13 @@ const Trabajadores = styled.img`
   position: absolute;
   padding-top: 90px;
   padding-left: 70px;
-  @media only screen and (max-width: 1440px){
+  @media only screen and (max-width: 1550px){
     width: 190px;
+  }
+  @media only screen and (max-width: 420px){
+    padding-top: 70px;
+    padding-left: 40px;
+    width: 130px;
   }
 `;
 

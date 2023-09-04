@@ -18,22 +18,31 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   height: 100%;
   width: 1400px;
-  gap: 60px;
+  gap: 50px;
+
+  min-width: 330px;
+  min-height: 300px;
 
 
-  @media only screen and (max-width: 1440px) {
-    padding: 0 50px 0 100px;
+  @media only screen and (max-width: 1550px) {
+    width: 90%;
+    gap: 0px;
   }
 
-  
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1080px) {
       flex-direction: column-reverse;
+      justify-content: center;
+  }
+
+  @media only screen and (max-height: 590px) {
+    flex-direction: column;
+    justify-content: center;
   }
 `;
 
@@ -45,7 +54,7 @@ const Frame = styled.div`
 	border: 1rem solid #ffffff;
 	border-image: repeating-linear-gradient(45deg, transparent, transparent 5px, #ffffff 6px, #ffffff 15px, transparent 16px, transparent 20px) 20/1rem;
   
-  @media only screen and (max-width: 1440px) {
+  @media only screen and (max-width: 1550px) {
     width: 90%;
   }
 
@@ -55,10 +64,10 @@ const Frame = styled.div`
 
   @media only screen and (max-width: 768px) {
     height: 80%;
-    display: none;
+
   }
 
-  @media only screen and (max-height: 465px) {
+  @media only screen and (max-height: 564px) {
     border: none;
     background: none;
   }
@@ -66,15 +75,16 @@ const Frame = styled.div`
 `;
 
 const Left = styled.div`
-  width: 60%;
+  width: 50%;
+  height: 50%;
+  
 
-  @media only screen and (max-width: 1440px) {
-    align-items: center;
-    width: 40%;
+  @media only screen and (max-width: 1080px) {
+    width: 100%;
   }
 
-  @media only screen and (max-width: 640px) {
-    display: none;
+  @media only screen and (max-height: 950px) {
+    height: 40%;
   }
 
   @media only screen and (max-height: 740px) {
@@ -85,25 +95,21 @@ const Left = styled.div`
 
 const Right = styled.div`
   width: 50%;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
 
-  @media only screen and (max-height: 1440px) {
-    width: 50%;
+  @media only screen and (max-width: 1080px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
   }
-
-
   @media only screen and (max-height: 740px) {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
+    height: 60%;
   }
 
-  @media only screen and (max-width: 600px) {
-    width: 100%;
-  }
 
 `;
 
@@ -111,11 +117,14 @@ const Title = styled.h1`
   font-size: 74px;
   text-align: center;
 
-  @media only screen and (max-width: 1440px) {
+  @media only screen and (max-width: 1550px) {
     font-size: 50px;
   }
 
   @media only screen and (max-width: 1000px) {
+    font-size: 40px;
+  }
+  @media only screen and (max-height: 480px) {
     font-size: 40px;
   }
 `;
@@ -129,7 +138,7 @@ const DescContainer = styled.div`
   
   
 
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 1550px) {
     padding-left: 10px;
     padding: 15px;
     margin: 10px;
@@ -161,14 +170,12 @@ const Desc = styled.p`
   
   
 
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 1550px) {
     padding: 10px;
   }
 
   @media only screen and (max-width: 768px) {
     font-size: 20px;
-    
-
   }
 `;
 
@@ -179,7 +186,7 @@ const Button = styled.a`
   font-size: 15px;
   margin-top: 15px;
   margin-top: 15px;
-  color: white;
+  color: black;
   width: 100px;
   padding: 10px;
   border-radius: 5px;

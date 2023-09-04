@@ -174,7 +174,12 @@ const Center = styled.div`
   justify-content: center;
   width: 200px;
   height: 60px;
-  
+
+  :hover{
+    span{
+      color:white;
+    }
+  }
 `;
 
 const Btn = styled.button`
@@ -184,23 +189,19 @@ const Btn = styled.button`
   width: 200px;
   height: 60px;
   cursor: pointer;
-  background: #b1b1b16c;
-  border: 1px solid #ffffff;
+  background: #e75c5c;
+  border: 2px solid #000;
+  border-radius: 10px;
   outline: none;
   transition: 1s ease-in-out;
   margin: 0px;
   padding: 0px;
 
 
-  svg{
-    fill: none;
-    stroke: #fff;
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
-  }
-  :hover svg {
-    stroke-dashoffset: -480;
+
+  :hover{
+    background-color: #e75c5c;
+    transition: 2s ease-in-out;
   }
 `;
 
@@ -213,7 +214,7 @@ const SvgButton = styled.svg`
 const LogoContainer = styled.div`
   display: flex;
   align-items: center;
-  border-right: 1px solid #d1d1d183;
+  border-right: 1px solid #000;
   justify-content: center;
   width: 40px;
   height: 60px;
@@ -234,14 +235,9 @@ const LogoButton = styled.img`
 
 const SpanText = styled.span`
   position: absolute;
-  color: #fff;
+  color: #000;
   font-size: 24px;
   font-weight: 400;
-
-  :hover {
-    transition: 1s ease-in-out;
-    color: #e75d5c;
-  }
 `;
 
 const BottomMenu = styled.div`

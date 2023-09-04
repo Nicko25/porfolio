@@ -17,13 +17,14 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 100%;
   width: 1400px;
+
+  min-width: 330px;
 
   @media only screen and (max-width: 1440px) {
     width: 90%;

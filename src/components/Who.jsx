@@ -179,17 +179,28 @@ const Desc = styled.p`
   }
 `;
 
-const Button = styled.a`
-  background-color: #e75d5c;
+const Button = styled.button`
+  background: #e75c5c;
   text-decoration: none;
-  text-align: center;
-  font-size: 15px;
-  margin-top: 15px;
-  margin-top: 15px;
-  color: black;
-  width: 100px;
-  padding: 10px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 140px;
+  height: 40px;
+  margin-top: 10px;
   border-radius: 5px;
+
+  a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  }
+  span{
+    color: #000;
+    font-weight: 400;
+    font-size: 15px;
+  }
+
 `;
 
 const Who = () => {
@@ -208,8 +219,12 @@ const Who = () => {
               <Subtitle>Como trabajo</Subtitle>
             </WhatWeDo>
             <Desc>La meta es la comprensión del problema. Lo mas importante es entender las necesidades de los clientes para poder brindar un software que cumpla con lo requerido por el cliente.</Desc>
-            <Button href='https://github.com/Nicko25' target='_blank'>Ver proyectos</Button>
           </DescContainer>
+          <Button> 
+            <a href='https://github.com/Nicko25' target='_blank'>
+              <span>Ver Proyectos</span>
+            </a>
+          </Button>
         </Right>
       </Container>
       <MouseIconUp/>

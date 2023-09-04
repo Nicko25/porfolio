@@ -328,10 +328,6 @@ const Works = () => {
               {data.map((item) => (
                 <Center key={item} text={item} onClick={() => setWork(item)}>
                   <Btn>
-                    <SvgButton viewBox="0 0 200 60">
-                      <polyline points="199,1 199,59 1,59 1,1 167,1" />
-                      <polyline points="199,1 199,59 1,59 1,1 167,1"/>
-                    </SvgButton>
                     <LogoContainer>
                       {item === "Web Design" ? (
                         <LogoButton src="./img/monitor_black.png"></LogoButton>

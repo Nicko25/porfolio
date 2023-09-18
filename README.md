@@ -1,8 +1,11 @@
 # Portfolio en React
 
 Este repositorio contiene un proyecto de portafolio personal desarrollado con React. El proyecto consta de varios componentes que se combinan para crear un sitio web de portafolio interactivo. A continuación, se presenta una descripción general de los componentes principales.
-
 [Visite el sitio aqui.](https://www.nicolas-menendez.com/)
+
+
+![Mi Portfolio]([http://url/to/img.png](https://github.com/Nicko25/porfolio3d/blob/deployed/page.png))
+
 ## Componentes
 
 ### `App.jsx`

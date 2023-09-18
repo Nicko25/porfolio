@@ -1,5 +1,6 @@
 #vscode folder
 .vscode/
+dist/
 #node_modules
 node_modules/
 #glb files
@@ -8,4 +9,4 @@ public/arreglar.txt
 src/components/Banner.jsx
 src/components/Contact.jsx
 src/components/Cube.jsx
-.dist
+dist/

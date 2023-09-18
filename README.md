@@ -4,7 +4,7 @@ Este repositorio contiene un proyecto de portafolio personal desarrollado con Re
 [Visite el sitio aqui.](https://www.nicolas-menendez.com/)
 
 
-[http://url/to/img.png](https://github.com/Nicko25/porfolio3d/blob/deployed/page.png](https://github.com/Nicko25/porfolio3d/blob/deployed/page.png)
+[Mi Portfolio](https://github.com/Nicko25/porfolio3d/blob/deployed/page.png)
 
 ## Componentes
 

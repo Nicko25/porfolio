@@ -1,0 +1,14 @@
+1. descargar y cambiar texturas a gusto con blender
+2. exportarlo como gltf + texture
+3. entrando en https://github.com/CesiumGS/gltf-pipeline
+4. copiar opcion de Converting a glTF to Draco glTF:
+    gltf-pipeline -i model.gltf -o modelDraco.gltf -d
+5. abrir cmd y cd a la carpeta donde exportamos el gltf + texture
+6. usar "gltf-pipeline -i model.gltf -o modelDraco.gltf -d" cambiando palabra model por el que nosotros creamos antes
+    IMPORTANTE: modelDraco es el nombre del objeto a crearse, no usar el mismo de origen.
+7.  entrando en https://github.com/pmndrs/gltfjsx
+8. usar "npx gltfjsx model.gltf --transform", model.gltf debe ser el objeto que se creo del paso anterior
+    IMPORTANTE: la ruta de cd debe ser la misma que la del comando anterior
+9. se deberian crear un archivo .jsx y un glb
+10. el archivo .jsx debe enviarse a components del proyecto y verificar que se incluya default function
+11. el archivo .glb debe ir en public folder

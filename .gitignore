@@ -1,0 +1,11 @@
+#vscode folder
+.vscode/
+#node_modules
+node_modules/
+#glb files
+public/Checklist-Objetos-3D.txt
+public/arreglar.txt
+src/components/Banner.jsx
+src/components/Contact.jsx
+src/components/Cube.jsx
+.dist

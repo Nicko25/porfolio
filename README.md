@@ -2,7 +2,7 @@
 
 Este repositorio contiene un proyecto de portafolio personal desarrollado con React. El proyecto consta de varios componentes que se combinan para crear un sitio web de portafolio interactivo. A continuación, se presenta una descripción general de los componentes principales.
 
-Visite el sitio aqui.[Nicolas Menendez]([URL "Texto del Título"](https://www.nicolas-menendez.com/)
+[Visite el sitio aqui.](https://www.nicolas-menendez.com/)
 ## Componentes
 
 ### `App.jsx`
